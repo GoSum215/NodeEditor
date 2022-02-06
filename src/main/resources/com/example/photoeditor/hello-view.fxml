@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="layoutBase" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.photoeditor.HelloController">
+    <children>
+        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="900.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="820.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox alignment="CENTER" maxWidth="100.0" minWidth="100.0" prefHeight="400.0" prefWidth="100.0" spacing="10.0" GridPane.hgrow="NEVER">
+                    <children>
+                        <Label text="Добавить:" />
+                        <ScrollPane maxWidth="100.0" prefHeight="232.0" prefWidth="100.0">
+                            <content>
+                                <VBox alignment="TOP_CENTER" maxWidth="80.0" minWidth="80.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="80.0" spacing="10.0">
+                                    <children>
+                                        <Button fx:id="integerButton" mnemonicParsing="false" text="Integer" />
+                                        <Button fx:id="exampleButton" mnemonicParsing="false" text="Example" />
+                                    </children>
+                                    <padding>
+                                        <Insets top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS">
+                    <children>
+                        <ScrollPane fx:id="ImageViewContainer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" prefHeight="300.0" prefWidth="820.0" VBox.vgrow="ALWAYS">
+                            <content>
+                                <ImageView fx:id="ImageViewObj" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                            </content>
+                        </ScrollPane>
+                        <Pane fx:id="DnDPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" prefHeight="300.0" prefWidth="820.0" VBox.vgrow="ALWAYS" />
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+    </children>
+</VBox>
